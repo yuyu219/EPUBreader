@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> The Walking Dead </title>
+	<script type="text/javascript">
+		function img(e){
+			//alert(1);
+			var three=document.getElementById("img3");
+			var a=document.getElementById("aaa");
+			a.innerHTML = "bbb";
+			//alert(three.width + " " + three.height);
+			//ar xx=parseFloat(e.pageX);
+			//var vx=typeof(xx);
+			
+			//alert(e.pageX + " " + e.pageY);
+			window.Android.makeToast(parseFloat(e.pageX), parseFloat(e.pageY));
+		}
+		
+		function initCoords(){
+			
+			var img=document.getElementsByTagName("img");
+			var map=document.getElementsByTagName("map");
+			for(n=0; n<img.length; n++)
+			{
+				var proportion=img[n].width/925;
+				for(i=0; i<map[n].getElementsByTagName("area").length; i++)
+				{
+					var arr=map[n].getElementsByTagName("area")[i].coords.split(",");
+					for(j=0; j<arr.length; j++)
+					{
+						if(j==0)
+						{
+							map[n].getElementsByTagName("area")[i].coords = arr[j]*proportion;
+						}
+						else
+						{
+							map[n].getElementsByTagName("area")[i].coords += "," + arr[j]*proportion;
+						}
+					}
+				}
+			}
+			//alert(map[2].getElementsByTagName("area").length);
+		}
+	</script>
+</head>
+<body onload="initCoords()">
+
+<img src="1.jpg" id="record" style="width:100%;" usemap="#ImageMap01"/>
+    <map name="ImageMap01">
+	</map>
+<img src="2.jpg" style="width:100%;" usemap="#ImageMap02"/>
+    <map name="ImageMap02">
+	</map>
+	<div id="aaa">
+	ccc
+	</div>
+<img src="3.jpg" style="width:100%;" usemap="#ImageMap03"/>
+    <map name="ImageMap03">
+		<area shape="rect" coords="90,50,175,120" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="40,365,145,460" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="145,390,230,485" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="235,385,395,520" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="730,385,870,520" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="40,710,135,760" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="145,710,420,770" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="165,770,310,900" onclick="img(event)" href="#ImageMap03">
+		<area shape="rect" coords="200,1130,340,1260" onclick="img(event)" href="#ImageMap03">
+	</map>
+<img src="4.jpg" style="width:100%;" usemap="#ImageMap04"/>
+    <map name="ImageMap04">
+		<area shape="rect" coords="550,110,695,240" onclick="img(event)" href="#ImageMap04">
+	</map>
+<img src="5.jpg" style="width:100%;" usemap="#ImageMap05"/>
+    <map name="ImageMap05">
+		<area shape="rect" coords="430,500,585,630" onclick="img(event)" href="#ImageMap05">
+	</map>
+<img src="6.jpg" style="width:100%;" usemap="#ImageMap06"/>
+    <map name="ImageMap06">
+		<area shape="rect" coords="60,80,145,165" onclick="img(event)" href="#ImageMap06">
+		<area shape="rect" coords="350,80,445,155" onclick="img(event)" href="#ImageMap06">
+		<area shape="rect" coords="445,105,575,180" onclick="img(event)" href="#ImageMap06">
+		<area shape="rect" coords="640,50,735,88" onclick="img(event)" href="#ImageMap06">
+		<area shape="rect" coords="705,88,870,190" onclick="img(event)" href="#ImageMap06">
+		<area shape="rect" coords="650,900,770,990" onclick="img(event)" href="#ImageMap06">
+	</map>
+<img src="7.jpg" style="width:100%;" usemap="#ImageMap07"/>
+    <map name="ImageMap07">
+		<area shape="rect" coords="175,85,310,210" onclick="img(event)" href="#ImageMap07">
+		<area shape="rect" coords="65,735,175,815" onclick="img(event)" href="#ImageMap07">
+		<area shape="rect" coords="340,505,440,600" onclick="img(event)" href="#ImageMap07">
+		<area shape="rect" coords="65,940,165,1035" onclick="img(event)" href="#ImageMap07">
+		<area shape="rect" coords="370,930,485,1020" onclick="img(event)" href="#ImageMap07">
+	</map>
+<img src="8.jpg" style="width:100%;" usemap="#ImageMap08"/>
+    <map name="ImageMap08">
+		<area shape="rect" coords="400,170,530,280" onclick="img(event)" href="#ImageMap08">
+	</map>	
+<img src="9.jpg" style="width:100%;" usemap="#ImageMap09"/>
+    <map name="ImageMap09">
+		<area shape="rect" coords="695,60,780,150" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="780,110,865,190" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="740,190,835,285" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="220,515,300,590" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="400,495,510,555" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="420,560,520,645" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="630,485,755,555" onclick="img(event)" href="#ImageMap09">
+		<area shape="rect" coords="60,1190,160,1285" onclick="img(event)" href="#ImageMap09">
+	</map>	
+<img src="10.jpg" style="width:100%;" usemap="#ImageMap10"/>
+    <map name="ImageMap10">
+		<area shape="rect" coords="330,642,428,737" onclick="img(event)" href="#ImageMap10">
+		<area shape="rect" coords="460,635,560,730" onclick="img(event)" href="#ImageMap10">
+		<area shape="rect" coords="120,930,220,1025" onclick="img(event)" href="#ImageMap10">
+		<area shape="rect" coords="345,925,423,1005" onclick="img(event)" href="#ImageMap10">
+	</map>	
+<img src="11.jpg" style="width:100%;" usemap="#ImageMap11"/>
+    <map name="ImageMap11">
+		<area shape="rect" coords="438,520,533,595" onclick="img(event)" href="#ImageMap11">
+		<area shape="rect" coords="750,1250,875,1340" onclick="img(event)" href="#ImageMap11">
+	</map>	
+<img src="12.jpg" style="width:100%;" usemap="#ImageMap12"/>
+    <map name="ImageMap12">
+		<area shape="rect" coords="550,135,645,230" onclick="img(event)" href="#ImageMap12">
+		<area shape="rect" coords="645,190,760,298" onclick="img(event)" href="#ImageMap12">
+		<area shape="rect" coords="765,670,865,755" onclick="img(event)" href="#ImageMap12">
+		<area shape="rect" coords="330,930,435,1015" onclick="img(event)" href="#ImageMap12">
+		<area shape="rect" coords="765,930,865,1015" onclick="img(event)" href="#ImageMap12">
+	</map>	
+<img src="13.jpg" style="width:100%;" usemap="#ImageMap13"/>
+    <map name="ImageMap13">
+		<area shape="rect" coords="380,65,480,160" onclick="img(event)" href="#ImageMap13">
+		<area shape="rect" coords="498,518,580,600" onclick="img(event)" href="#ImageMap13">
+	</map>	
+<img src="14.jpg" style="width:100%;" usemap="#ImageMap14"/>
+    <map name="ImageMap14">
+		<area shape="rect" coords="490,930,580,1010" onclick="img(event)" href="#ImageMap14">
+	</map>	
+<img src="15.jpg" style="width:100%;" usemap="#ImageMap15"/>
+    <map name="ImageMap15">
+		<area shape="rect" coords="630,505,730,578" onclick="img(event)" href="#ImageMap15">
+	</map>	
+<img src="16.jpg" style="width:100%;" usemap="#ImageMap16"/>
+    <map name="ImageMap16">
+		<area shape="rect" coords="75,870,190,980" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="415,840,500,890" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="475,870,580,942" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="425,942,550,1040" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="730,840,845,905" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="815,905,870,950" onclick="img(event)" href="#ImageMap16">
+		<area shape="rect" coords="720,930,820,1040" onclick="img(event)" href="#ImageMap16">
+	</map>	
+<img src="17.jpg" style="width:100%;" usemap="#ImageMap17"/>
+    <map name="ImageMap17">
+		<area shape="rect" coords="350,70,430,150" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="640,50,790,135" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="760,120,860,195" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="480,320,590,420" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="195,510,340,630" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="533,510,653,602" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="595,660,715,780" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="30,910,220,1045" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="265,910,430,1060" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="480,935,600,1055" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="695,910,780,990" onclick="img(event)" href="#ImageMap17">
+		<area shape="rect" coords="775,935,885,1035" onclick="img(event)" href="#ImageMap17">
+	</map>	
+<img src="18.jpg" style="width:100%;" usemap="#ImageMap18"/>
+    <map name="ImageMap18">
+		<area shape="rect" coords="270,45,485,205" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="350,210,475,305" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="495,45,765,185" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="620,300,890,480" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="35,485,275,645" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="330,485,590,570" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="410,580,595,675" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="625,510,760,595" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="65,930,200,1060" onclick="img(event)" href="#ImageMap18">
+		<area shape="rect" coords="555,945,695,1088" onclick="img(event)" href="#ImageMap18">
+	</map>	
+<img src="19.jpg" style="width:100%;" usemap="#ImageMap19"/>
+    <map name="ImageMap19">
+		<area shape="rect" coords="295,50,390,130" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="520,125,592,197" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="162,360,466,480" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="130,490,388,655" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="225,665,365,785" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="420,490,670,670" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="435,734,605,905" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="48,925,208,1045" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="225,922,344,1025" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="345,935,415,1000" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="420,930,550,1040" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="610,915,875,1010" onclick="img(event)" href="#ImageMap19">
+		<area shape="rect" coords="710,1225,885,1370" onclick="img(event)" href="#ImageMap19">
+	</map>	
+<img src="20.jpg" style="width:100%;" usemap="#ImageMap20"/>
+    <map name="ImageMap20">
+		<area shape="rect" coords="220,385,305,465" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="630,70,722,145" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="725,70,890,175" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="490,485,750,635" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="355,790,427,862" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="505,810,600,890" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="130,930,200,990" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="195,940,343,1095" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="560,930,682,1025" onclick="img(event)" href="#ImageMap20">
+		<area shape="rect" coords="688,950,773,1035" onclick="img(event)" href="#ImageMap20">
+	</map>	
+<img src="21.jpg" style="width:100%;" usemap="#ImageMap21"/>
+    <map name="ImageMap21">
+		<area shape="rect" coords="356,75,454,170" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="470,60,695,190" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="700,70,796,165" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="55,485,260,595" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="360,505,440,585" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="445,505,575,600" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="610,505,692,593" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="690,485,885,602" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="55,930,175,1060" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="230,975,355,1078" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="320,905,545,945" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="380,955,640,1080" onclick="img(event)" href="#ImageMap21">
+		<area shape="rect" coords="640,915,830,1020" onclick="img(event)" href="#ImageMap21">
+	</map>	
+<img src="22.jpg" style="width:100%;" usemap="#ImageMap22"/>
+    <map name="ImageMap22">
+		<area shape="rect" coords="225,50,405,225" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="415,110,545,270" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="750,85,855,190" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="150,510,300,630" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="225,695,300,760" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="320,490,550,595" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="715,485,895,635" onclick="img(event)" href="#ImageMap22">
+		<area shape="rect" coords="60,930,205,1050" onclick="img(event)" href="#ImageMap22">
+	</map>
+<img src="23.jpg" style="width:100%;" usemap="#ImageMap23" />
+	<map name="ImageMap23">
+		<area shape="rect" coords="465,85,585,180" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="215,130,305,205" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="300,195,380,260" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="225,265,330,335" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="805,925,855,975" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="340,1260,420,1305" onclick="img(event)" href="#ImageMap23">
+		<area shape="rect" coords="400,1308,505,1350" onclick="img(event)" href="#ImageMap23">
+	</map>
+<img src="24.jpg" style="width:100%;" usemap="#ImageMap24" />
+	<map name="ImageMap24">
+		<area shape="rect" coords="450,70,605,200" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="50,500,135,600" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="140,505,305,640" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="325,523,485,625" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="465,480,580,520" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="510,580,580,640" onclick="img(event)" href="#ImageMap24">
+		<area shape="rect" coords="630,995,760,1105" onclick="img(event)" href="#ImageMap24">
+	</map>
+
+<img src="25.jpg" style="width:100%;" usemap="#ImageMap25" />
+	<map name="ImageMap25">
+		<area shape="rect" coords="190,1120,275,1200" onclick="img(event)" href="#ImageMap25">
+	</map>
+<img src="26.jpg" style="width:100%;"/>
+<img src="27.jpg" style="width:100%;"/>
+<img src="28.jpg" style="width:100%;"/>
+<img src="29.jpg" style="width:100%;" usemap="#ImageMap29" />
+	<map name="ImageMap29">
+		<area shape="rect" coords="50,0,205,70" onclick="img(event)" href="#ImageMap29">
+		<area shape="rect" coords="150,55,325,220" onclick="img(event)" href="#ImageMap29">//////
+		<area shape="rect" coords="305,155,480,320" onclick="img(event)" href="#ImageMap29">
+		<area shape="rect" coords="220,325,360,450" onclick="img(event)" href="#ImageMap29">
+	</map>
+<img src="30.jpg" style="width:100%;" usemap="#ImageMap30" />
+	<map name="ImageMap30">
+		<area shape="rect" coords="220,50,375,120" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="565,50,720,120" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="680,110,790,170" onclick="img(event)" href="#ImageMap30">//////
+		<area shape="rect" coords="85,490,280,590" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="335,505,495,620" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="630,490,830,550" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="740,555,845,635" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="160,935,295,1045" onclick="img(event)" href="#ImageMap30">
+		<area shape="rect" coords="680,945,773,1030" onclick="img(event)" href="#ImageMap30">
+	</map>
+<img src="31.jpg" style="width:100%;" usemap="#ImageMap31" />
+	<map name="ImageMap31">
+		<area shape="rect" coords="160,70,300,170" onclick="img(event)" href="#ImageMap31">
+		<area shape="rect" coords="400,80,540,190" onclick="img(event)" href="#ImageMap31">
+		<area shape="rect" coords="620,50,805,145" onclick="img(event)" href="#ImageMap31">
+		<area shape="rect" coords="135,505,240,615" onclick="img(event)" href="#ImageMap31">
+		<area shape="rect" coords="445,515,580,635" onclick="img(event)" href="#ImageMap31">
+		<area shape="rect" coords="445,795,550,845" onclick="img(event)" href="#ImageMap31">
+	</map>
+<img src="32.jpg" style="width:100%;" usemap="#ImageMap32" />
+	<map name="ImageMap32">
+		<area shape="rect" coords="305,100,420,185" onclick="img(event)" href="#ImageMap32">
+		<area shape="rect" coords="675,700,830,780" onclick="img(event)" href="#ImageMap32">
+		<area shape="rect" coords="625,1030,700,1085" onclick="img(event)" href="#ImageMap32">
+		<area shape="rect" coords="200,1255,275,1330" onclick="img(event)" href="#ImageMap32">
+	</map>
+<img src="33.jpg" style="width:100%;" usemap="#ImageMap33" />
+	<map name="ImageMap33">
+		<area shape="rect" coords="255,45,340,85" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="220,88,310,135" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="270,240,355,315" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="270,370,360,455" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="485,600,595,650" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="190,680,300,780" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="345,685,435,770" onclick="img(event)" href="#ImageMap33">
+		<area shape="rect" coords="620,710,700,780" onclick="img(event)" href="#ImageMap33">
+	</map>
+<img src="34.jpg" style="width:100%;"/>
+<img src="35.jpg" style="width:100%;" usemap="#ImageMap35" />
+	<map name="ImageMap35">
+		<area shape="rect" coords="175,495,250,545" onclick="img(event)" href="#ImageMap35">
+		<area shape="rect" coords="215,545,280,605" onclick="img(event)" href="#ImageMap35">
+		<area shape="rect" coords="480,680,560,780" onclick="img(event)" href="#ImageMap35">
+		<area shape="rect" coords="225,880,315,945" onclick="img(event)" href="#ImageMap35">
+		<area shape="rect" coords="240,948,335,1000" onclick="img(event)" href="#ImageMap35">
+	</map>
+<img src="36.jpg" style="width:100%;"/>
+<img src="37.jpg" style="width:100%;"/>
+<img src="38.jpg" style="width:100%;"/>
+<img src="39.jpg" style="width:100%;" usemap="#ImageMap39" />
+	<map name="ImageMap39">
+		<area shape="rect" coords="620,320,720,380" onclick="img(event)" href="#ImageMap39">
+	</map>
+<img src="40.jpg" style="width:100%;" usemap="#ImageMap40" />
+	<map name="ImageMap40">
+		<area shape="rect" coords="263,270,425,400" onclick="img(event)" href="#ImageMap40">
+	</map>
+<img src="41.jpg" style="width:100%;"/>
+<img src="42.jpg" style="width:100%;"/>
+<img src="43.jpg" style="width:100%;"/>
+<img src="44.jpg" style="width:100%;"/>
+<img src="45.jpg" style="width:100%;"/>
+<img src="46.jpg" style="width:100%;"/>
+<img src="47.jpg" style="width:100%;"/>
+<img src="48.jpg" style="width:100%;"/>
+<img src="49.jpg" style="width:100%;"/>
+<img src="50.jpg" style="width:100%;"/>
+<img src="51.jpg" style="width:100%;"/>
+
+</body>
+</html>
